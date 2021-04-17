@@ -6,10 +6,10 @@ variable "name" {
     description = "Name the instance on deploy"
 }
 
-resource "aws_instance" "mariam_jenkins" {
-    ami = "ami-04b9e92b5572fa0d1"
+resource "aws_instance" "admin_jenkins" {
+    ami = "ami-042e8287309f5df03"
     instance_type = "t2.micro"
-    key_name = "mariam"
+    key_name = "admin"
 
     tags = {
         Name = var.name
