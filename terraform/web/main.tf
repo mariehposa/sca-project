@@ -12,6 +12,6 @@ resource "aws_instance" "mariam_web" {
     key_name = "mariam"
 
     tags = {
-        Name = "${var.name}"
+        Name = var.name
     }
 }
