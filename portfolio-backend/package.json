@@ -1,0 +1,27 @@
+{
+  "name": "portfolio-backend",
+  "version": "1.0.0",
+  "description": "backend for my portfolio website",
+  "main": "index.js",
+  "scripts": {
+    "server": "nodemon index.js",
+    "start": "node index.js"
+  },
+  "author": "Mariam",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "helmet": "^3.21.2",
+    "heroku": "^7.35.0",
+    "knex": "^0.20.2",
+    "pg": "^7.14.0",
+    "sequelize": "^6.6.2",
+    "sqlite3": "^5.0.2"
+  },
+  "devDependencies": {
+    "eslint": "^6.6.0",
+    "nodemon": "^1.19.4"
+  }
+}
