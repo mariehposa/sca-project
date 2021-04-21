@@ -3,12 +3,6 @@
   become: yes
   become_method: sudo
 
-  vars:
-    - create_containers: 1
-    - default_container_name: backend
-    - default_container_image: ubuntu
-    - default_container_command: sleep 1d
-
   tasks:
   
   - name: Install pip
@@ -45,37 +39,11 @@
       state: started
       enabled: yes
 
-  - name: Pull default Docker image
-    docker_image:
-      name: "{{ default_container_image }}"
-      source: pull
-
-  - name: Create default containers
-    docker_container:
-      name: "{{ default_container_name }}{{ item }}"
-      image: "{{ default_container_image }}"
-      state: present
-    with_sequence: count={{ create_containers }}
-
   - name: Check if container is running
     shell: docker ps
 
-  # - name: Build Docker image from Dockerfile
-  #   docker_image:
-  #     name: backend
-  #     build:
-  #       pull: no
-  #       path: ../portfolio-backend
-  #       dockerfile: dockerfile
-  #     source: build
-  #     state: present
-        
-  # - name: Running the container
-  #   docker_container:
-  #     image: backend
-  #     name: Dockerfile
-  #     build:
-  #       path: ../portfolio-backend
-  #     source: running
-  #     state: latest
-            
+  - name: Run docker image
+    shell: docker run -dit --name backend -p 4000:4000 mariehposa/backend:sca-project
+
+  - name: Show running images
+    shell: docker images

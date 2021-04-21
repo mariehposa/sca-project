@@ -42,5 +42,8 @@
   - name: Check if container is running
     shell: docker ps
 
-  - name: show running images
+  - name: Run docker image
+    shell: docker run -dit --name frontend -p 3000:3000 mariehposa/frontend:sca-project
+
+  - name: Show running images
     shell: docker images
