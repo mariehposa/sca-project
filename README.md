@@ -1,6 +1,6 @@
 # She Code Africa (SCA) Final Project
 
-A three tier application (frontend, backend, database) deployed using Infrastructure as Code (IaC) and AWS.
+A three tier application (frontend, backend, and database) deployed using Terraform, Ansible and AWS.
 
 * Frontend App
 ![image](https://user-images.githubusercontent.com/33374159/115548743-b976c300-a29f-11eb-9479-1f477e131f9a.png)
@@ -20,7 +20,7 @@ A three tier application (frontend, backend, database) deployed using Infrastruc
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
+These instructions will get you a copy of the project up and running on your local machine for development and production purposes.
 
 ## Prerequisites
 
@@ -45,24 +45,24 @@ NODE_ENV=development
 ```
 
 ### Installation
-Below are the steps required in setting this project up. For more information about this, please refer to my [article]()
+Below are the steps required in setting this project up. For more information about this, please refer to my [article](https://dev.to/mariehposa/how-to-deploy-an-application-to-aws-ec2-instance-using-terraform-and-ansible-3e78)
 ### Docker
 
-* In the root folder of `portfolio-backend`, run `docker build -t image-name .` to build the dockerfile into docker image.
+* In the root folder of `portfolio-frontend`, run `docker build -t image-name .` to build the Dockerfile into docker image.
 * Run `docker run image-name` to build a container from that image.
 * Add tag to the docker image using `docker tag image-name docker_hub_username/repo-name:tag-name`.
-* The run `docker push docker_hub_username/repo-name:tag-name` to push the docker image to your repo.
+* The run `docker push docker_hub_username/repo-name:tag-name` to push the docker image to your dockerhub repo.
 * Carry out the same process for the **portfolio-backend**.
 
 ### Terraform
 
-* `cd` into `terraform/jenkins` and run `terraform init` to grab requirements for your AWS provider.
+* `cd` into `terraform/jenkins` and run `terraform init` to grab the requirements for your AWS provider.
 * Run `terraform plan` to verify that we've set it up correctly. It will later prompt for a value, enter the instance name, `jenkins`.
-* Then run terraform `terraform apply` to spin up your ec2 instance. It will also prompt for a value, enter the instance name, `jenkins` and later enter `yes` to confirm.
+* Then run terraform `terraform apply` to spin up your ec2 instance. It will also prompt for a value, enter the instance name, `jenkins` and `yes` to confirm.
 * Carry out the same process for `terraform/backend` and `terraform/frontend`.
 ### Ansible
 
-* To run ansible playbooks, `cd` into `ansible folder` and run the following commands one after the other:
+* To run ansible playbooks, `cd` into `ansible` folder and run the following commands one after the other:
 - `ansible-playbook provision_jenkins.yaml`
 - `ansible-playbook provision_frontend.yaml`
 - `ansible-playbook provision_backend.yaml`
