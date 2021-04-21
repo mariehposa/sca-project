@@ -15,7 +15,7 @@ A three tier application (frontend, backend, database) deployed using Infrastruc
 * [Ansible](#ansible "Ansible")
 5. [Deployment](#deployment "Deployment")
 6. [Tools and Technologies](#tools-and-technologies "Tools and Technologies")
-7. [Authors](#authors "Authors")
+7. [Author](#author "Author")
 8. [Acknowledgments](#acknowledgments "Acknowledgments")
 
 ## Getting Started
@@ -86,10 +86,11 @@ Below are the steps required in setting this project up. For more information ab
 * [Knex](http://knexjs.org/) - is a SQL query builder for Postgres, SQLite3, etc, designed to be flexible, portable, and fun to use.
 * [Postgresql](https://www.postgresql.org/) - A open source object-relational database system.
 
-## Authors
+## Author
 
-* **Mariam Adedeji** - [github](https://github.com/mariehposa)
+* [Mariam Adedeji](https://github.com/mariehposa)
 
 ## Acknowledgments
 
 * She Code Africa
+* Deimos
