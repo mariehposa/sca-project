@@ -10,9 +10,9 @@ A three tier application (frontend, backend, database) deployed using Infrastruc
 2. [Prerequisites](#prerequisites "Prerequisites")
 3. [Enviroment variables](#enviroment-variables "Enviroment Variables")
 4. [Installation](#installation "Installation")
-* [Docker](#docker "Docker")
-* [Terraform](#terraform "Terraform")
-* [Ansible](#ansible "Ansible")
+   [Docker](#docker "Docker")
+   [Terraform](#terraform "Terraform")
+   [Ansible](#ansible "Ansible")
 5. [Deployment](#deployment "Deployment")
 6. [Tools and Technologies](#tools-and-technologies "Tools and Technologies")
 7. [Author](#author "Author")
@@ -63,9 +63,9 @@ Below are the steps required in setting this project up. For more information ab
 ### Ansible
 
 * To run ansible playbooks, `cd` into `ansible folder` and run the following commands one after the other:
-- ansible-playbook provision_jenkins.yaml
-- ansible-playbook provision_frontend.yaml
-- ansible-playbook provision_backend.yaml
+- `ansible-playbook provision_jenkins.yaml`
+- `ansible-playbook provision_frontend.yaml`
+- `ansible-playbook provision_backend.yaml`
 
 ## Deployment
 
