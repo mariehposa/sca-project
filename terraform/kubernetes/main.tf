@@ -113,7 +113,7 @@ resource "kubernetes_deployment" "frontend" {
             initial_delay_seconds = 3
             period_seconds        = 3
           }
-          EXTERNAL_IP = "192.0.0.12"
+          
         }
       }
     }
